@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMSArticle", "CMSArticle\CMSArticle.csproj", "{5C6C4519-541F-457F-86C4-9C317D52E82B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMSArticle.ModelsLayer", "CMSArticle.ModelsLayer\CMSArticle.ModelsLayer.csproj", "{1553EFFD-ADBC-468A-B5D2-40B57B3FE37F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5C6C4519-541F-457F-86C4-9C317D52E82B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C6C4519-541F-457F-86C4-9C317D52E82B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C6C4519-541F-457F-86C4-9C317D52E82B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1553EFFD-ADBC-468A-B5D2-40B57B3FE37F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1553EFFD-ADBC-468A-B5D2-40B57B3FE37F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1553EFFD-ADBC-468A-B5D2-40B57B3FE37F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1553EFFD-ADBC-468A-B5D2-40B57B3FE37F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
