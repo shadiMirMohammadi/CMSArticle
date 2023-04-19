@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMSArticle.ModelsLayer", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMSArticle.RepositoryLayer", "CMSArticle.RepositoryLayer\CMSArticle.RepositoryLayer.csproj", "{F1D43D29-D28E-400B-91BA-72EBA6B41677}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMSArticle.ServiceLayer", "CMSArticle.ServiceLayer\CMSArticle.ServiceLayer.csproj", "{1D82BED6-6D06-4FB8-A5E8-D591BEE2E59E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F1D43D29-D28E-400B-91BA-72EBA6B41677}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1D43D29-D28E-400B-91BA-72EBA6B41677}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1D43D29-D28E-400B-91BA-72EBA6B41677}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D82BED6-6D06-4FB8-A5E8-D591BEE2E59E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D82BED6-6D06-4FB8-A5E8-D591BEE2E59E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D82BED6-6D06-4FB8-A5E8-D591BEE2E59E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D82BED6-6D06-4FB8-A5E8-D591BEE2E59E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
