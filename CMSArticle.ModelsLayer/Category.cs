@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 namespace CMSArticle.ModelsLayer
 {
     [Table("T_Category")]
-    public class Category
+    public class Category : BaseEntity
     {
         [Key]
         [Required]

@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CMSArticle.ModelsLayer
 {
-    public abstract class Person
+    public abstract class Person : BaseEntity
     {
         [Key]
         [Required]

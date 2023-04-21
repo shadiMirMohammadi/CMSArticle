@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace CMSArticle.ModelsLayer.Context
 {
-    class CMSContext : DbContext
+    public class CMSContext : DbContext
     {
         public DbSet<Admin> Admins { get; set; }
         public DbSet<User> Users { get; set; }

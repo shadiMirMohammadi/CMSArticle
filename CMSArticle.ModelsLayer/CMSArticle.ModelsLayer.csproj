@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Admin.cs" />
     <Compile Include="Article.cs" />
+    <Compile Include="BaseEntity.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Comment.cs" />
     <Compile Include="Context\CMSContext.cs" />

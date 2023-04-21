@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 namespace CMSArticle.ModelsLayer
 {
     [Table("T_User")]
-    public class User : Person
+    public class User : Person 
     {
         public IEnumerable<Article> Articles { get; set; }
         public Role Role { get; set; }
