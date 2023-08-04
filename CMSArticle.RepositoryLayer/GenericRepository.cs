@@ -39,7 +39,6 @@ namespace CMSArticle.RepositoryLayer
             }
             catch (Exception)
             {
-
                 return false;
             }
         }
@@ -53,7 +52,6 @@ namespace CMSArticle.RepositoryLayer
             }
             catch (Exception)
             {
-
                 return false;
             }
         }
@@ -67,7 +65,6 @@ namespace CMSArticle.RepositoryLayer
             }
             catch (Exception)
             {
-
                 return false;
             }
         }
@@ -82,7 +79,6 @@ namespace CMSArticle.RepositoryLayer
             }
             catch (Exception)
             {
-
                 return false;
             }
         }
