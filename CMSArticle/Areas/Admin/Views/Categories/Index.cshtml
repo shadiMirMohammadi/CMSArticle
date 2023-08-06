@@ -1,0 +1,54 @@
+﻿@model IEnumerable<CMSArticle.Views.ViewModels.CategoryViewModel>
+
+@{
+    ViewBag.Title = " دسته بندی ها |";
+    int count = 1;
+}
+
+    <div class="index">
+        <div>
+            <h1>لیست دسته بندی ها</h1>
+            <div>
+                @Html.ActionLink("ثبت دسته بندی جدید", "Create", null, new { @class = "btn-color btn btn-success" })
+            </div>
+        </div>
+        <div class="margin-r-20 flex-space-around">
+            <div class="table-col">
+                ردیف
+            </div>
+            <div class="table-col">
+                @Html.DisplayNameFor(model => model.Title)
+            </div>
+            <div class="table-col-operation">
+                عملیات
+            </div>
+        </div>
+        @foreach (var item in Model)
+        {
+
+            <div class="table-row margin-r-20 flex-space-around">
+                <div class="table-col">
+                    @count
+                </div>
+                <div class="table-col">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </div>
+
+
+                <div class="table-col-operation">
+                    @Html.ActionLink("ویرایش", "Edit", new { id = item.CategoryId }, new { @class = "btn btn-warning" }) |
+                    @Html.ActionLink("جزئیات", "Details", new { id = item.CategoryId }, new { @class = "btn btn-info" }) |
+                    <a class="btn btn-danger" style="color:white" onclick="Delete(@item.CategoryId)">
+                        حذف
+                    </a>
+                </div>
+
+            </div>
+            count++;
+        }
+    </div>
+@*<div id="List">
+    @Html.Action("Index")
+</div>*@
+
+<script src="~/Scripts/site.js"></script>

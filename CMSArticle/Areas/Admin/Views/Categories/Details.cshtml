@@ -1,0 +1,35 @@
+﻿@model CMSArticle.Views.ViewModels.CategoryViewModel
+
+@{
+    ViewBag.Title = $" دسته بندی : {Model.Title} |";
+
+}
+
+
+<div class="details-admins details">
+    <div>
+        <h4>دسته بندی : @Model.Title</h4>
+    </div>
+
+    <div class="col">
+        <div class="form-label">
+            @Html.DisplayNameFor(model => model.Title)
+        </div>
+        <div class="col-md-2">
+            @Html.DisplayFor(model => model.Title)
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="form-label">
+            @Html.DisplayNameFor(model => model.ImageName)
+        </div>
+
+        <img src="~/Image/Category/@Model.ImageName" id="newImagePreview" />
+    </div>
+    <div class="col col-pro__input">
+        @Html.ActionLink("بازگشت به لیست", "Index", null, new { @class = "btn btn-info" })
+        @Html.ActionLink("ویرایش", "Edit", new { id = Model.CategoryId }, new { @class = "btn btn-warning  margin-r-5" })
+
+    </div>
+</div>
