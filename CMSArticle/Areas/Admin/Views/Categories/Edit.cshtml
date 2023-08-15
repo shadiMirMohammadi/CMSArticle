@@ -6,51 +6,41 @@
 
 }
 
-<h2>Edit</h2>
-
-
 @using (Html.BeginForm("Edit", "Categories", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
+    <div class="edit">
+        <div class="form-horizontal ">
+            <div>
+                <h4>دسته بندی : @Model.Title</h4>
+            </div>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.CategoryId)
+            @Html.HiddenFor(model => model.ImageName)
 
-    <div class="form-horizontal details-admins  ">
-        <div>
-            <h4>دسته بندی : @Model.Title</h4>
-        </div>
-      
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.CategoryId)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            <div class="form-group flex">
+                @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-3">
+                    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group flex">
+                @Html.LabelFor(model => model.ImageName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div>
+                    <img src="~/Image/Category/@Model.ImageName" id="newImagePreview" /> <br />
+                    <input class="margin-t-75-r-30" type="file" id="imageUpload" name="imageUpload" onclick="imagePreview(this)" value="NoImages.png" />
+                    @Html.HiddenFor(model => model.ImageName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ImageName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col col-pro__input">
+                    @Html.ActionLink("بازگشت به لیست", "Index", null, new { @class = "btn btn-info" })
+                    <input type="submit" value="ثبت" class="btn btn-success margin-r-5" />
+                </div>
             </div>
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ImageName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-
-
-                <img src="~/Image/Category/@Model.ImageName" width="80" id="newImagePreview" /> <br />
-                <input type="file" id="imageUpload" name="imageUpload" onclick="imagePreview(this)" value="NoImage.png" />
-
-                @Html.HiddenFor(model => model.ImageName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ImageName, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-        <div class="form-row">
-            <div class="col">
-                @Html.ActionLink("بازگشت به لیست", "Index", null, new { @class = "btn btn-info" })
-                <input type="submit" value="ثبت" class="btn btn-success" />
-            </div>
-        </div>
-
-
     </div>
 }
 
