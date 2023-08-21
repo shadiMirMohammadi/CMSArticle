@@ -22,8 +22,12 @@ namespace CMSArticle.App_Start
                     "~/Scripts/bootstrap.bundle.js",
                     "~/Scripts/bootstrap.min.js",
                     "~/Scripts/jquery-{version}.js",
-                    "~/Scripts/jquery.validate*"
-               ));
+                    "~/Scripts/jquery.validate*",             
+                    "~/Scripts/jquery-3.0.0.min.js",
+                    "~/ckeditor/adapters/jquery.js",
+                    "~/ckeditor/ckeditor.js",
+                    "~/Scripts/site.js"
+                     ));
         }
     }
 }

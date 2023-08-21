@@ -7,17 +7,15 @@
     <title>@ViewBag.Title   پنل مدیریت ادمین </title>
     @Styles.Render("~/Content/Css")
 </head>
-<body class="rtl bg-body-admin" >
+<body class="rtl bg-body-admin">
     <div>
         @Html.Partial("_PDashboardAdminRight")
         @Html.Partial("_PDashboardAdminTop")
     </div>
-    
-
     <div class="body-content">
         @RenderBody()
-
     </div>
     @Scripts.Render("~/Scripts/js")
+    <script src="~/ckeditor/adapters/jquery.js"></script>
 </body>
 </html>
