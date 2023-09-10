@@ -1,0 +1,57 @@
+﻿@model IEnumerable<CMSArticle.Views.ViewModels.CommentViewModel>
+
+@{
+    ViewBag.Title = " کامنت ها |";
+    int count = 1;
+}
+
+
+
+<div class="index">
+    <div>
+        <h1>لیست کامنت ها</h1>
+    </div>
+    <div class="margin-r-20 flex-space-around">
+        <div class="table-col">
+            ردیف
+        </div>
+        <div class="table-col">
+            @Html.DisplayNameFor(model => model.Content)
+        </div>
+        <div class="table-col">
+            @Html.DisplayNameFor(model => model.IsActive)
+        </div>
+
+        <div class="table-col-operation">
+            عملیات
+        </div>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="table-row margin-r-20 flex-space-around">
+            <div class="table-col">
+                @count
+            </div>
+            <div class="table-col">
+                @Html.DisplayFor(modelItem => item.Content)
+            </div>
+            <div class="table-col">
+                @if (item.IsActive == true)
+                {
+                    <span class="color-grean">تایید شده</span>
+                }
+                else
+                {
+                    <span class="color-red"> در انتظار بررسی</span>
+                }
+            </div>
+            <div class="table-col-operation">
+                @Html.ActionLink("ویرایش", "Edit", new { id = item.CommentId }, new { @class = "btn btn-warning" })
+                <a class="btn btn-danger margin-r-5 btn-color-white" onclick="DeleteComment(@item.CommentId)">
+                    حذف
+                </a>
+            </div>
+        </div>
+        count++;
+    }
+</div>

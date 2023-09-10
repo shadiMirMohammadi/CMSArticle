@@ -12,7 +12,7 @@
                 @Html.ActionLink("ثبت دسته بندی جدید", "Create", null, new { @class = "btn-color btn btn-success" })
             </div>
         </div>
-        <div class="margin-r-20 flex-space-around">
+        <div class="flex-space-around">
             <div class="table-col">
                 ردیف
             </div>
@@ -25,7 +25,7 @@
         </div>
         @foreach (var item in Model)
         {
-            <div class="table-row margin-r-20 flex-space-around">
+            <div class="flex-space-around">
                 <div class="table-col">
                     @count
                 </div>
@@ -35,7 +35,7 @@
                 <div class="table-col-operation">
                     @Html.ActionLink("ویرایش", "Edit", new { id = item.CategoryId }, new { @class = "btn btn-warning" }) 
                     @Html.ActionLink("جزئیات", "Details", new { id = item.CategoryId }, new { @class = "btn btn-info margin-r-5" }) 
-                    <a class="btn btn-danger margin-r-5 btn-color-white"  onclick="Delete(@item.CategoryId)">
+                    <a class="btn btn-danger margin-r-5 btn-color-white"  onclick="DeleteCategories(@item.CategoryId)">
                         حذف
                     </a>
                 </div>

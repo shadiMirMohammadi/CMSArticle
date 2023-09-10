@@ -1,0 +1,63 @@
+﻿@model IEnumerable<CMSArticle.Views.ViewModels.AdminRoleViewModel>
+
+@{
+    ViewBag.Title = " مدیران |";
+    int count = 1;
+}
+
+<div class="index">
+    <div>
+        <h1>لیست مدیران</h1>
+        <div>
+            @Html.ActionLink("ثبت مدیر جدید", "Create", null, new { @class = "btn-color btn btn-success" })
+        </div>
+    </div>
+    <div class="flex-space-around">
+        <div class="table-col">
+            ردیف
+        </div>
+        <div class="table-col">
+            نام و نام خانوادگی
+        </div>
+        <div class="table-col">
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </div>
+        <div class="table-col">
+            @Html.DisplayNameFor(model => model.IsActive)
+        </div>
+        <div class="table-col-operation width-140">
+            عملیات
+        </div>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="flex-space-around">
+            <div class="table-col">
+                @count
+            </div>
+            <div class="table-col">
+                @Html.DisplayFor(modelItem => item.Name)
+                @Html.DisplayFor(modelItem => item.Family)
+            </div>
+            <div class="table-col">
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </div>
+            <div class="table-col">
+                @if (item.IsActive == true)
+                {
+                    <span class="color-grean">فعال</span>
+                }
+                else
+                {
+                    <span class="color-red">غیر فعال</span>
+                }
+            </div>
+            <div class="table-col-operation width-140 ">
+                @Html.ActionLink("ویرایش", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
+            </div>
+        </div>
+        count++;
+    }
+</div>
+
+<script src="~/Scripts/site.js"></script>

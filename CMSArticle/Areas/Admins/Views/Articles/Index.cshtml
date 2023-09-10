@@ -1,0 +1,78 @@
+﻿@model IEnumerable<CMSArticle.Views.ViewModels.ArticleViewModel>
+
+@{
+    ViewBag.Title = " مقالات |";
+    int count = 1;
+}
+
+<div class="index">
+    <div>
+        <h1>لیست مقالات</h1>
+    </div>
+    <div class="flex-space-around">
+        <div class="table-col">
+            ردیف
+        </div>
+        <div class="table-col">
+            @Html.DisplayNameFor(model => model.Title)
+        </div>
+        <div class="table-col">
+            <span>دسته بندی</span>
+        </div>
+        <div class="table-col">
+            <span>نویسنده</span>
+        </div>
+
+
+        <div class="table-col">
+            @Html.DisplayNameFor(model => model.IsActive)
+        </div>
+        <div class="table-col-operation width-400">
+            عملیات
+        </div>
+    </div>
+    @foreach (var item in Model)
+    {
+
+        <div class="flex-space-around">
+            <div class="table-col">
+                @count
+            </div>
+            <div class="table-col">
+                @Html.DisplayFor(modelItem => item.Title)
+            </div>
+
+            <div class="table-col">
+                @Html.DisplayFor(modelItem => item.Category.Title)
+            </div>
+
+            <div class="table-col">
+                <span>@item.User.Name @item.User.Family</span>
+            </div>
+
+            <div class="table-col">
+                @if (item.IsActive == true)
+                {
+                    <span class="color-grean">منتشر شده</span>
+                }
+                else
+                {
+                    <span class="color-red">منتشر نشده</span>
+                }
+            </div>
+            <div class="table-col-operation width-400">
+                @Html.ActionLink("ویرایش", "Edit", new { id = item.ArticleId }, new { @class = "btn btn-warning" })
+                @Html.ActionLink("جزئیات", "Details", new { id = item.ArticleId }, new { @class = "btn btn-info margin-r-5" })
+
+                <a class="btn btn-danger margin-r-5 margin-l-5 btn-color-white" onclick="DeleteArticles(@item.ArticleId)">
+                    حذف
+                </a>
+
+
+            </div>
+        </div>
+        count++;
+    }
+</div>
+
+<script src="~/Scripts/site.js"></script>
