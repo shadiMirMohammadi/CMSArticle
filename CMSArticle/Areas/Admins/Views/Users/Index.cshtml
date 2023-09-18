@@ -1,0 +1,75 @@
+﻿@model IEnumerable<CMSArticle.ModelsLayer.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+    <div class="dashboard">
+            @Html.Partial("_PDashboardAdminRight")
+            @Html.Partial("_PDashboardAdminTop")
+        <div class="index"> 
+             <div>
+                <h1>لیست مدیران</h1>
+                <div>
+                    @Html.ActionLink("ثبت  جدید", "Create", null, new { @class = "btn-color btn btn-success" })
+                </div>
+            </div>
+               <div class="margin-r-20">
+                               
+                                                                       <div class="table-col">
+                                @Html.DisplayNameFor(model => model.Name)                      
+                       </div>
+                                                       <div class="table-col">
+                                @Html.DisplayNameFor(model => model.Family)                      
+                       </div>
+                                                       <div class="table-col">
+                                @Html.DisplayNameFor(model => model.PhoneNumber)                      
+                       </div>
+                                                       <div class="table-col">
+                                @Html.DisplayNameFor(model => model.Password)                      
+                       </div>
+                                                       <div class="table-col">
+                                @Html.DisplayNameFor(model => model.ImageName)                      
+                       </div>
+                                                       <div class="table-col">
+                                @Html.DisplayNameFor(model => model.RegisterDate)                      
+                       </div>
+                                                       <div class="table-col">
+                                @Html.DisplayNameFor(model => model.IsActive)                      
+                       </div>
+                        
+                </div>
+                @foreach (var item in Model) {
+                    
+                        <div class="table-row margin-r-20">                  
+                                                                                        <div class="table-col">
+                                @Html.DisplayFor(modelItem => item.Name)
+                           </div>
+                                                                    <div class="table-col">
+                                @Html.DisplayFor(modelItem => item.Family)
+                           </div>
+                                                                    <div class="table-col">
+                                @Html.DisplayFor(modelItem => item.PhoneNumber)
+                           </div>
+                                                                    <div class="table-col">
+                                @Html.DisplayFor(modelItem => item.Password)
+                           </div>
+                                                                    <div class="table-col">
+                                @Html.DisplayFor(modelItem => item.ImageName)
+                           </div>
+                                                                    <div class="table-col">
+                                @Html.DisplayFor(modelItem => item.RegisterDate)
+                           </div>
+                                                                    <div class="table-col">
+                                @Html.DisplayFor(modelItem => item.IsActive)
+                           </div>
+                                                <div class="table-col__div-last">
+                                @Html.ActionLink("ویرایش", "Edit", new { id=item.Id }, new { @class = "btn btn-warning" }) |
+                                @Html.ActionLink("جزئیات", "Details", new { id=item.Id }, new { @class = "btn btn-info" }) |
+                                @Html.ActionLink("حذف", "Delete", new { id=item.Id }, new { @class = "btn btn-danger" })
+                             </div>
+                                                      
+                         </div>
+                    }

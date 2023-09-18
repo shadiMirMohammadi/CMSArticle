@@ -10,28 +10,36 @@
                 <h5>10</h5>
                 <span class="material-symbols-outlined">dashboard</span>
             </div>
-            <span>دسته بندی ها</span>
+            <span>
+                @Html.ActionLink("دسته بندی ها", "Index", "Categories", null, null)
+            </span>
         </li>
         <li>
             <div>
                 <h5>10</h5>
                 <span class="material-symbols-outlined">article</span>
             </div>
-            <span>مقاله ها</span>
+            <span>
+                @Html.ActionLink("مقالات", "Index", "Articles", null, null)
+            </span>
         </li>
         <li>
             <div>
                 <h5>10</h5>
                 <span class="material-symbols-outlined">comment</span>
             </div>
-            <span>دیدگاه ها</span>
+            <span>
+                @Html.ActionLink("دیدگاه ها", "Index", "Comments", null, null)
+            </span>
         </li>
         <li>
             <div>
                 <h5>10</h5>
                 <span class="material-symbols-outlined">shield_person</span>
             </div>
-            <span>مدیران</span>
+            <span>
+                @Html.ActionLink("مدیران", "Index", "AdminRoles", null, null)
+            </span>
         </li>
 
         <li>
@@ -95,7 +103,9 @@
                 <h5>10</h5>
                 <span class="material-symbols-outlined">account_circle</span>
             </div>
-            <span>کاربران</span>
+            <span>
+                @Html.ActionLink("کاربران", "Index", "UserRoles", null, null)
+            </span>
         </li>
     </ul>
 </div>

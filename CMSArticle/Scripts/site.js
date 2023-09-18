@@ -9,21 +9,70 @@ function imagePreview(input) {
     }
 }
 
-function Delete(id) {
+function DeleteCategories(id) {
     $.ajax({
 
         /*url: '@Url.Action("/Categories/Delete")',*/
-        url: "/Categories/Delete/",
+        url: "/Categories/DeleteCategories/",
         type: 'POST',
         data: { id: id },
 
         success: function (res) {
-            alert("حذف انجام شد");
-            alert("مجدد صفحه را تازه سازی کنید");
+            alert("حذف انجام شد(مجددا تازه سازی کنید)");
         },
         error: function () {
-            alert("حذف انجام شد");
-            alert("مجدد صفحه را تازه سازی کنید");
+            alert("حذف انجام شد(مجددا تازه سازی کنید)");
+        }
+    });
+}
+
+function DeleteArticles(id) {
+    $.ajax({
+
+        /*url: '@Url.Action("/Categories/Delete")',*/
+        url: "/Articles/DeleteArticles/",
+        type: 'POST',
+        data: { id: id },
+
+        success: function (res) {
+            alert("حذف انجام شد(مجددا تازه سازی کنید)");
+        },
+        error: function () {
+            alert("حذف انجام شد(مجددا تازه سازی کنید)");
+        }
+    });
+}
+
+function DeleteComment(id) {
+    $.ajax({
+
+        /*url: '@Url.Action("/Categories/Delete")',*/
+        url: "/Comments/DeleteComment/",
+        type: 'POST',
+        data: { id: id },
+
+        success: function (res) {
+            alert("حذف انجام شد(مجددا تازه سازی کنید)");
+        },
+        error: function () {
+            alert("حذف انجام شد(مجددا تازه سازی کنید)");
+        }
+    });
+}
+
+function UserDelete(id) {
+    $.ajax({
+
+        /*url: '@Url.Action("/Categories/Delete")',*/
+        url: "/UserRoles/UserDelete/",
+        type: 'POST',
+        data: { id: id },
+
+        success: function (res) {
+            alert("حذف انجام شد(مجددا تازه سازی کنید)");
+        },
+        error: function () {
+            alert("حذف انجام شد(مجددا تازه سازی کنید)");
         }
     });
 }
@@ -31,3 +80,10 @@ function Delete(id) {
 //success: function (res) {
 //    $("#List").html(res);
 //},
+
+
+$(function () {
+    $('#Content').ckeditor();
+});
+
+
