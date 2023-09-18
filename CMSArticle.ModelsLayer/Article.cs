@@ -39,13 +39,13 @@ namespace CMSArticle.ModelsLayer
         public bool IsActive { get; set; }
 
 
-        [Required]
-        public int UserId { get; set; } = 0;
+       
+        public int UserId { get; set; }
 
-        [Required]
-        public int CategoryId { get; set; } = 0;
+        
+        public int CategoryId { get; set; } 
 
-        public User User { get; set; }
+        public UserRole User { get; set; }
 
         public Category Category { get; set; }
         public IEnumerable<Comment> Comments { get; set; }

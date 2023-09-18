@@ -12,7 +12,6 @@ namespace CMSArticle.ModelsLayer
     public class Comment : BaseEntity
     {
         [Key]
-        [Required]
         public int CommentId { get; set; }
 
         [Required]
@@ -27,10 +26,8 @@ namespace CMSArticle.ModelsLayer
         public bool IsActive { get; set; }
 
 
-
-
-        public Admin Admin { get; set; }
-        public User User { get; set; }
+        public AdminRole Admin { get; set; }
+        public UserRole  User { get; set; }
         public Article Article { get; set; }
 
 

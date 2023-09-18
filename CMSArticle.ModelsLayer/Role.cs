@@ -20,8 +20,8 @@ namespace CMSArticle.ModelsLayer
         public string Title { get; set; }
 
 
-        public IEnumerable<User> Users { get; set; }
-        public IEnumerable<Admin> Admins { get; set; }
+        public IEnumerable<UserRole> Users { get; set; }
+        public IEnumerable<AdminRole> Admins { get; set; }
 
     }
 }

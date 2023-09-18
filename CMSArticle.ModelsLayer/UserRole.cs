@@ -8,10 +8,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CMSArticle.ModelsLayer
 {
-    [Table("T_Admin")]
-    public class Admin : Person
+    [Table("T_User")]
+    public class UserRole : Person 
     {
+        public IEnumerable<Article> Articles { get; set; }
         public Role Role { get; set; }
         public IEnumerable<Comment> Comments { get; set; }
+
     }
 }
